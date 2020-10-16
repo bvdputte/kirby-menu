@@ -1,0 +1,32 @@
+type: group
+fields:
+  facebook:
+    type: text
+    label: Facebook page URL
+    translate: false
+    width: 1/2
+  twitter:
+    type: text
+    label: Twitter profile URL
+    translate: false
+    width: 1/2
+  flickr:
+    type: text
+    label: Flickr profile URL
+    translate: false
+    width: 1/2
+  instagram:
+    type: text
+    label: Instagram profile URL
+    translate: false
+    width: 1/2
+  youtube:
+    type: text
+    label: YouTube channel URL
+    translate: false
+    width: 1/2
+  linkedin:
+    type: text
+    label: Linkedin profile page URL
+    translate: false
+    width: 1/2

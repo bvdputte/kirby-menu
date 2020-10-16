@@ -1,0 +1,13 @@
+type: structure
+label: Multiple menu
+menutype: multiple
+fields:
+  headline:
+    type: text
+    label: Menu name
+  items:
+    type: structure
+    label: Menu links
+    fields:
+      item:
+        extends: fields/menulink

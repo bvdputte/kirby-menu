@@ -1,0 +1,6 @@
+type: structure
+label: Menu links
+menutype: single
+fields:
+  item:
+    extends: fields/menulink
