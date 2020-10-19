@@ -7,7 +7,7 @@
                         <?php if($linkItem->type() === "page"): ?>
                             <?php if(page($linkItem->value())): ?>
                                 <li>
-                                    <?= $linkItem->tag(["class" => "someClass"]) ?>
+                                    <?= $linkItem->tag() ?>
                                 </li>
                             <?php endif ?>
                         <?php else: ?>
