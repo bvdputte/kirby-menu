@@ -10,11 +10,6 @@ fields:
     label: Twitter profile URL
     translate: false
     width: 1/2
-  flickr:
-    type: text
-    label: Flickr profile URL
-    translate: false
-    width: 1/2
   instagram:
     type: text
     label: Instagram profile URL
@@ -28,5 +23,15 @@ fields:
   linkedin:
     type: text
     label: Linkedin profile page URL
+    translate: false
+    width: 1/2
+  pinterest:
+    type: text
+    label: Pinterest profile page URL
+    translate: false
+    width: 1/2
+  flickr:
+    type: text
+    label: Flickr profile URL
     translate: false
     width: 1/2
