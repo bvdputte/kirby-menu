@@ -10,4 +10,4 @@ fields:
     label: Menu links
     fields:
       item:
-        extends: fields/menulink
+        extends: fields/linkobject

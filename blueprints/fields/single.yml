@@ -3,4 +3,4 @@ label: Menu links
 menutype: single
 fields:
   item:
-    extends: fields/menulink
+    extends: fields/linkobject

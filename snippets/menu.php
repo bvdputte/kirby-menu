@@ -3,16 +3,8 @@
         <ul>
             <?php foreach ($items as $menuItem): ?>
                 <?php $linkItem = $menuItem->item()->toLinkObject() ?>
-                    <?php if($linkItem): // No-longer-existing pages become `null` when updated ?>
-                        <?php if($linkItem->type() === "page"): ?>
-                            <?php if(page($linkItem->value())): ?>
-                                <li>
-                                    <?= $linkItem->tag() ?>
-                                </li>
-                            <?php endif ?>
-                        <?php else: ?>
-                            <li><?= $linkItem->tag() ?></li>
-                        <?php endif ?>
+                    <?php if($linkItem): ?>
+                        <li><?= $linkItem ?></li>
                     <?php endif ?>
             <?php endforeach ?>
         </ul>

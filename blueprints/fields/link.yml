@@ -1,9 +1,0 @@
-label: Link
-type: link
-settings:
-  popup: false
-  text:
-    width: 1/1
-    label: Link text
-    help: Override the generated link text here
-  hash: false
