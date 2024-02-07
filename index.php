@@ -20,10 +20,8 @@ Kirby::plugin('bvdputte/kirby-menus', [
 
             if ($this->$id()->exists()) {
                 foreach($this->$id()->toStructure() as $menuItem) {
-                    $linkItem = $menuItem->item()->toLinkObject();
-
-                    if(($linkItem->isNotEmpty()) && ($linkItem->type() === "page") && (!is_null(page($linkItem->value())))) {
-                        $pages->add($linkItem->value());
+                    if ($page = page($menuItem->item()->toLinkObject()->link()->value())) {
+                        $pages->add($page);
                     }
                 }
             }
