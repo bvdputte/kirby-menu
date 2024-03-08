@@ -4,7 +4,7 @@ By default Kirby makes it easy to work with content that has 1 primary navigatio
 
 ## Installation
 
-- ⚠️ This plugin is dependent on the excellent [kirby-link-field plugin](https://github.com/OblikStudio/kirby-link-field)
+- ⚠️ This plugin is dependent on the [kirby-linkobject plugin](https://github.com/bvdputte/kirby-linkobject)
 - unzip [master.zip](https://github.com/bvdputte/kirby-menu/archive/master.zip) as folder `site/plugins/kirby-menu` or
 - `git submodule add https://github.com/bvdputte/kirby-menu.git site/plugins/kirby-menu`
 
