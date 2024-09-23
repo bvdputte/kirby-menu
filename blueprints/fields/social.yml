@@ -7,7 +7,7 @@ fields:
     width: 1/2
   twitter:
     type: text
-    label: Twitter profile URL
+    label: X (Twitter) profile URL
     translate: false
     width: 1/2
   instagram:

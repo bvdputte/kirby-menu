@@ -1,14 +1,22 @@
 <?php
-    $socialNetworks = ["facebook", "twitter", "instagram", "flickr", "youtube", "linkedin"];
+$socialNetworks = [
+	"facebook" => "facebook",
+	"twitter" => "x-twitter",
+	"instagram" => "instagram",
+	"flickr" => "flickr",
+	"youtube" => "youtube",
+	"linkedin" => "linkedin",
+	"pinterest" => "pinterest"
+];
 ?>
 
 <nav id="socialmenu">
     <ul>
-        <?php foreach($socialNetworks as $item): ?>
-            <?php if(($site->$item()->exists()) && ($site->$item()->isNotEmpty())): ?>
+        <?php foreach($socialNetworks as $field => $icon): ?>
+            <?php if(($site->$field()->exists()) && ($site->$field()->isNotEmpty())): ?>
                 <li>
-                    <a href="<?= $site->$item()->value() ?>">
-                        <i class="icon icon--<?= $item ?>"></i> <?= str::ucfirst($item) ?>
+                    <a href="<?= $site->$field()->value() ?>">
+                        <i class="icon icon--<?= $icon ?>"></i> <?= str::ucfirst($field) ?>
                     </a>
                 </li>
             <?php endif ?>
