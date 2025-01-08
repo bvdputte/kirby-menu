@@ -12,15 +12,15 @@ $socialNetworks = [
 ?>
 
 <nav id="socialmenu">
-    <ul>
-        <?php foreach($socialNetworks as $field => $icon): ?>
-            <?php if(($site->$field()->exists()) && ($site->$field()->isNotEmpty())): ?>
-                <li>
-                    <a href="<?= $site->$field()->value() ?>">
-                        <i class="icon icon--<?= $icon ?>"></i> <?= str::ucfirst($field) ?>
-                    </a>
-                </li>
-            <?php endif ?>
-        <?php endforeach ?>
-    </ul>
+	<ul>
+		<?php foreach ($socialNetworks as $field => $icon): ?>
+			<?php if (($site->$field()->exists()) && ($site->$field()->isNotEmpty())): ?>
+				<li>
+					<a href="<?= $site->$field()->value() ?>">
+						<i class="icon icon--<?= $icon ?>"></i> <?= Str::ucfirst($field) ?>
+					</a>
+				</li>
+			<?php endif ?>
+		<?php endforeach ?>
+	</ul>
 </nav>
