@@ -1,6 +1,6 @@
-<?php if ((isset($id)) && ($site->$id()->exists())): ?>
+<?php if ((isset($id)) && ($context->$id()->exists())): ?>
     <div id="<?= $id ?>">
-        <?php foreach($site->$id()->toStructure() as $nav): ?>
+        <?php foreach($context->$id()->toStructure() as $nav): ?>
             <nav id="<?= $id . "-" . str::slug($nav->headline()) ?>">
                 <h2><?= $nav->headline() ?></h2>
                 <?php snippet("menu/render-menu", ["items" => $nav->items()->toStructure()]) ?>

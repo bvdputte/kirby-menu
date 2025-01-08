@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/classes/Menu.php';
+
 Kirby::plugin('bvdputte/kirby-menus', [
     'blueprints' => [
         'fields/singlemenu' => __DIR__ . '/blueprints/fields/single.yml',
@@ -13,46 +15,14 @@ Kirby::plugin('bvdputte/kirby-menus', [
         'menu/social' => __DIR__ . '/snippets/social.php'
     ],
     'siteMethods' => [
-        // Returns a `pages` object with all `page` objects in the menu
-        // - all other types are discarded
-        'menuPages' => function($id) {
-            $pages = new Pages();
-
-            if ($this->$id()->exists()) {
-                foreach($this->$id()->toStructure() as $menuItem) {
-                    if ($page = page($menuItem->item()->toLinkObject()->link()->value())) {
-                        $pages->add($page);
-                    }
-                }
-            }
-
-            return $pages;
-        },
-        // Renders a menu, based on it's type using a snippet
-        'menu' => function($id, $snippet=null) {
-            // Check if `$id` exists as field in `site` blueprint
-            if (!array_key_exists($id, $this->blueprint()->fields())) {
-                return "";
-            }
-
-            // If there's a snippet defined; use this
-            if (!is_null($snippet)) {
-                return snippet($snippet, compact("id"), true);
-            }
-
-            // If there is a custom snippet `menu-id` for this menu id; use this
-            $customSnippet = snippet('menu/'.$id, compact("id"), true);
-            if ($customSnippet !== "") {
-                return $customSnippet;
-            }
-
-            // Use snippet supplied with plugin
-            if(array_key_exists('menutype', $this->blueprint()->fields()[$id])) {
-                return snippet('menu/'.$this->blueprint()->fields()[$id]['menutype'], compact("id"), true);
-            } else {
-                throw new Exception('No `menutype` defined for menu ' . $id);
-            }
-        },
+		'menuPages' => function($id, $context=null) {
+			$context ??= $this;
+			return bvdputte\Menu\Menu::pages($id, $context);
+		},
+		'menu' => function($id, $snippet=null, $context=null) {
+			$context ??= $this;
+			return bvdputte\Menu\Menu::render($id, $snippet, $context);
+		},
         // Renders a menu with social networks
         'socialmenu' => function() {
             return snippet("menu/social", [], true);

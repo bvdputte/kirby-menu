@@ -79,6 +79,11 @@ footerdoormatnav:
 
 Render in template/snippet: `<?= $site->menu("footerdoormatnav") ?>`
 
+### Add menu to page
+
+You can also add a menu to a page via a blueprint.
+In the template you'll need to pass a context too: `<?= $site->menu("footerdoormatnav", context: Page("page://some-uuid")) ?>`
+
 ## Extra's
 
 ### Social menu
