@@ -1,37 +1,42 @@
 type: group
 fields:
   facebook:
-    type: text
+    type: url
     label: Facebook page URL
     translate: false
     width: 1/2
   twitter:
-    type: text
+    type: url
     label: X (Twitter) profile URL
     translate: false
     width: 1/2
   instagram:
-    type: text
+    type: url
     label: Instagram profile URL
     translate: false
     width: 1/2
   youtube:
-    type: text
+    type: url
     label: YouTube channel URL
     translate: false
     width: 1/2
   linkedin:
-    type: text
+    type: url
     label: Linkedin profile page URL
     translate: false
     width: 1/2
   pinterest:
-    type: text
+    type: url
     label: Pinterest profile page URL
     translate: false
     width: 1/2
   flickr:
-    type: text
+    type: url
     label: Flickr profile URL
+    translate: false
+    width: 1/2
+  tiktok:
+    type: url
+    label: Tiktok URL
     translate: false
     width: 1/2

@@ -6,7 +6,8 @@ $socialNetworks = [
 	"flickr" => "flickr",
 	"youtube" => "youtube",
 	"linkedin" => "linkedin",
-	"pinterest" => "pinterest"
+	"pinterest" => "pinterest",
+	"tiktok" => "tiktok"
 ];
 ?>
 
