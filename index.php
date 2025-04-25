@@ -27,5 +27,15 @@ Kirby::plugin('bvdputte/kirby-menus', [
 		'socialmenu' => function () {
 			return snippet("menu/social", [], true);
 		}
+	],
+	'pageMethods' => [
+		'menuPages' => function ($id, $context = null) {
+			$context ??= $this;
+			return bvdputte\Menu\Menu::pages($id, $context);
+		},
+		'menu' => function ($id, $snippet = null, $context = null) {
+			$context ??= $this;
+			return bvdputte\Menu\Menu::render($id, $snippet, $context);
+		}
 	]
 ]);
