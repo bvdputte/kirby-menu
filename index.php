@@ -21,7 +21,7 @@ Kirby::plugin('bvdputte/kirby-menus', [
 		},
 		'menu' => function ($id, $snippet = null, $context = null) {
 			$context ??= $this;
-			return bvdputte\Menu\Menu::render($id, $snippet, $context);
+			return bvdputte\Menu\Menu::render($id, $context, $snippet);
 		},
 		// Renders a menu with social networks
 		'socialmenu' => function () {
@@ -35,7 +35,7 @@ Kirby::plugin('bvdputte/kirby-menus', [
 		},
 		'menu' => function ($id, $snippet = null, $context = null) {
 			$context ??= $this;
-			return bvdputte\Menu\Menu::render($id, $snippet, $context);
+			return bvdputte\Menu\Menu::render($id, $context, $snippet);
 		}
 	]
 ]);

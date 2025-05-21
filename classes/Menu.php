@@ -9,7 +9,7 @@ use \Kirby\Cms\Site;
 class Menu
 {
 	// Renders a menu, based on it's type using a snippet
-	public static function render (String $id, String|null $snippet=null, Site|Page $context): String
+	public static function render (String $id, Site|Page $context, String|null $snippet=null): String
 	{
 		// Check if `$id` exists as field in `site` blueprint
 		if (!array_key_exists($id, $context->blueprint()->fields())) {
